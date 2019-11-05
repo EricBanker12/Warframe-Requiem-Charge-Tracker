@@ -12,13 +12,19 @@ html, body {
   line-height: 1;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 1rem;
   color: white;
-  background: #333;
+  text-shadow: 0 0 10px red;
+  background: #444;
 }
-@media (min-height: 500px) {
+@media (min-width: 500px) and (min-height: 600px) {
   html, body {
-    font-size: 3vh;
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 1000px) and (min-height: 800px) {
+  html, body {
+    font-size: 1.5rem;
   }
 }
 
@@ -26,14 +32,14 @@ header {
   height: 5%;
   width: 100%;
   min-width: 320px;
-  min-height: 20px;
+  min-height: 1.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid black;
 }
 
-h4 {
+h4, p, span {
   margin: 0;
   font-weight: normal;
 }
@@ -43,7 +49,7 @@ h4 {
   height: 95%;
   width: 100%;
   min-width: 320px;
-  min-height: 480px;
+  min-height: 460px;
 }
 
 .col-1, .col-2, .col-3 {
@@ -70,7 +76,6 @@ h4 {
   height: 11.25%;
   width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   border: 1px solid black;
@@ -80,15 +85,22 @@ h4 {
   padding: 5px;
 }
 
+.col-2 img {
+  height: 100%;
+  max-height: 75px;
+}
+.col-2 span {
+  margin-left: 0.2em;
+}
+
+.col-3 > div {
+  flex-direction: column;
+}
+
 .counter {
   text-align: center;
-  font-size: 20px;
+  font-size: 1.25rem;
   margin-bottom: 0.2em;
-}
-@media (min-height: 500px) {
-  .counter {
-    font-size: 4vh;
-  }
 }
 
 .btn {
@@ -98,18 +110,10 @@ h4 {
   background: darkred;
   line-height: 1;
   font-family: Arial, Helvetica, sans-serif;
-  width: 30px;
-  height: 20px;
-  font-size: 15px;
-  border-radius: 20px;
-}
-@media (min-height: 500px) {
-  .btn {
-    width: 6vh;
-    height: 4vh;
-    font-size: 3vh;
-    border-radius: 4vh;
-  }
+  width: 2rem;
+  height: 1.25rem;
+  font-size: 1rem;
+  border-radius: 1.25rem;
 }
 .btn.blue {
   background: darkblue;
